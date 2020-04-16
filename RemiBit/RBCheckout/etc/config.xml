@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <rbcheckout>
+                <active>1</active>
+                <title>RemiBit Checkout</title>
+                <model>RemiBit\RBCheckout\Model\RBCheckout</model>
+                <order_status>pending_payment</order_status>
+                <transaction_type>payment</transaction_type>
+                <is_gateway>1</is_gateway>
+                <can_order>1</can_order>
+                <can_use_checkout>1</can_use_checkout>
+                <can_capture>1</can_capture>
+                <login backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <trans_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <trans_md5 backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <trans_signature_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <cgi_url>https://app.remibit.com/pay</cgi_url>
+                <allowspecific>0</allowspecific>
+                <currency>USD</currency>
+                <place_order_url>remibit/payment/place</place_order_url>
+            </rbcheckout>
+        </payment>
+    </default>
+</config>

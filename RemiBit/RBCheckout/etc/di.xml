@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Config\Model\Config\TypePool">
+        <arguments>
+            <argument name="sensitive" xsi:type="array">
+                <item name="payment/rbcheckout/login" xsi:type="string">1</item>
+                <item name="payment/rbcheckout/trans_key" xsi:type="string">1</item>
+                <item name="payment/rbcheckout/trans_md5" xsi:type="string">1</item>
+                <item name="payment/rbcheckout/merchant_email" xsi:type="string">1</item>
+                <item name="payment/rbcheckout/cgi_url" xsi:type="string">1</item>
+                <item name="payment/rbcheckout/email_customer" xsi:type="string">1</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\App\Request\CsrfValidator">
+        <plugin name="csrf_validator_skip" type="RemiBit\RBCheckout\Plugin\CsrfValidatorSkip" />
+    </type>
+<!--    <preference for="Magento\Sales\Model\Order\Payment" type="RemiBit\RBCheckout\Model\Payment" />-->
+
+</config>
