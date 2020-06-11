@@ -31,7 +31,7 @@ sudo -u www-data mkdir -p app/code
 2/. Fetch the RemiBit module
 
 ```
-sudo -u www-data wget https://github.com/RemiBit/magento2-remibit/releases/download/v1.0/magento2-remibit.zip
+sudo -u www-data wget https://github.com/RemiBit/magento2-remibit/releases/download/v1.01/magento2-remibit.zip
 ```
 
 3/. Uncompress it
